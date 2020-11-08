@@ -11,11 +11,10 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: "Gatsby Site",
-    description: "site of practise",
+    title: "Intelsnap Inc.",
+    description: "Intelligence at a snap",
     author: "@Laeeq",
-    data: ["item1", "item2"],
-    person: { name: "Malik", age: "6"},
+    
   },
   plugins: [`gatsby-plugin-styled-components` ,
             `gatsby-transformer-sharp`,

@@ -1,0 +1,11 @@
+/* .ico {
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  font-size: 0.8rem;
+} */
+
+.Container-fluid {
+  background-color: #f8f6f5;
+  padding-left: 3px;
+  margin-left: auto;
+}
