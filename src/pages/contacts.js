@@ -2,11 +2,12 @@ import React from 'react'
 import { Row, Col } from 'antd'
 import Layout from '../components/layout'
 import cont from '../images/contact.png'
-import './contact.css'
+
 import '../utils/font-awesome'
 import 'antd/dist/antd.css'
+import { ButonCon, ContactConf } from './contacts.styled'
 
-const contacts = () => (
+const Contacts = () => (
   <Layout>
     <Row className="about-pic">
       '
@@ -25,7 +26,7 @@ const contacts = () => (
         <Col span={1}> </Col>
 
         <Col span={10}>
-          <div className="contact-option-f">
+          <ContactConf>
             {/* <h1> Contact </h1> */}
             <form name="contacts" method="post">
               <div className="form-group">
@@ -68,21 +69,13 @@ const contacts = () => (
                   style={{ width: '100%', padding: '6px 12px' }}
                 />
               </div>
-
-              <button type="submit" className="btn-submit">
-                {' '}
-                Send Message{' '}
-              </button>
-              {/* <a className="btn-submit" href="mailto:info@intelsnap.com">
-                {' '}
-                Send Message{' '}
-              </a> */}
+              <ButonCon> Send Message </ButonCon>
             </form>
-          </div>
+          </ContactConf>
         </Col>
       </Row>
     </section>
   </Layout>
 )
 
-export default contacts
+export default Contacts

@@ -11,9 +11,11 @@ const Navbar = () => (
       defaultSelectedKeys={['1']}
       style={{
         width: '100%',
+        height: '8%',
         background: 'white',
         fontWeight: 'bold',
         textAlign: 'center',
+        position: 'fixed',
       }}
     >
       <Menu.Item>
@@ -21,7 +23,7 @@ const Navbar = () => (
           <img src={logo} alt="intelsnap" width="90" height="50" />
         </Link>
       </Menu.Item>
-      <Menu.Item Selectedkey="1">
+      <Menu.Item defaultSelectedkey="1">
         <Link to="/"> Home </Link>
       </Menu.Item>
       <Menu.Item key="2">

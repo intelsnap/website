@@ -12,13 +12,12 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.12",
     "antd": "^4.8.2",
-    "babel-plugin-styled-components": "^1.11.1",
     "dotenv": "^8.2.0",
     "gatsby": "^2.24.79",
     "gatsby-image": "^2.4.21",
@@ -39,6 +38,11 @@
     "typescript": "3.7.5"
   },
   "devDependencies": {
+    
+   
+    
+
+    "babel-plugin-styled-components": "^1.11.1",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
     "babel-eslint": "^10.1.0",

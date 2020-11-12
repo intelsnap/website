@@ -6,20 +6,21 @@ import about from '../images/about.png'
 import pic from '../images/image1.jpeg'
 import pic1 from '../images/image2.jpeg'
 
-// import styles from '../components/about.module.css'
-import 'antd/dist/antd.css' // or 'antd/dist/antd.less'
-
 const Button = styled.button`
   padding: 3px;
   width: 100%;
   color: white;
   background-color: black;
   text-align: center;
+  :hover {
+    border: 3px solid rgb(5, 7, 7);
+    background: grey;
+    color: #0a0a0a;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
 `
-
-// function changeBackground(e) {
-//   e.target.style.background = 'grey'
-// }
 
 const About = () => (
   <Layout>
@@ -32,14 +33,17 @@ const About = () => (
             alt="about"
             width="100%"
             height="100%"
-            style={{ paddingLeft: '15px', paddingRight: '10px' }}
+            style={{
+              paddingLeft: '15px',
+              paddingRight: '10px',
+            }}
           />
         </Col>
       </Row>
       <Row>
         <Col span={3}> </Col>
         <Col span={12}>
-          <h1> Fueled by innovation </h1>
+          <h1 style={{ fontSize: '36px' }}> Fueled by innovation </h1>
           <p
             style={{
               textAlign: 'justify',
