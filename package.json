@@ -1,9 +1,5 @@
 {
   "name": "intelsnap-website",
-  "private": true,
-  "description": "A static website for Intelsnap Inc.",
-  "version": "0.1.0",
-  "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -21,8 +17,9 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.12",
+    "antd": "^4.8.2",
     "babel-plugin-styled-components": "^1.11.1",
-    "bootstrap": "^4.5.3",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.24.79",
     "gatsby-image": "^2.4.21",
     "gatsby-plugin-sharp": "^2.6.43",
@@ -32,29 +29,40 @@
     "gatsby-transformer-sharp": "^2.5.20",
     "global": "^4.4.0",
     "i": "^0.3.6",
-    "react": "^16.12.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.14.0",
     "react-bootstrap": "^1.4.0",
-    "react-dom": "^16.12.0",
-    "styled-components": "^5.2.0"
+    "react-dom": "^16.14.0",
+    "react-is": "^16.13.1",
+    "styled-components": "^5.2.1",
+    "typescript": "3.7.5"
   },
   "devDependencies": {
-    "eslint": "^7.13.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.0",
+    "@typescript-eslint/parser": "^4.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^6.0.0",
     "eslint-config-wesbos": "^1.0.1",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-html": "^6.1.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "peerdeps": "^1.1.1",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.1",
+    "xxxxx": "^1.0.3"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-hello-world.git"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-hello-world#readme",
   "main": "gatsby-config.js",
   "keywords": [],
   "author": ""

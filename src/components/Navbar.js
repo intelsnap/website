@@ -1,61 +1,46 @@
 import { Link } from 'gatsby'
-import React from 'react';
-//import {Logowrapper} from "../components/logoelement";
-//import {useStaticQuery, graphql} from "gatsby";
-import logo from "../assets/logo.svg";
-import './Navbar.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav from 'react-bootstrap/Nav';
+import React from 'react'
+import { Menu } from 'antd'
+import logo from '../assets/logo.svg'
 
-
-const Navbar = () => {
-    // const data = useStaticQuery(graphql `
-    //     query {
-    //         logo: file(relativePath: {eq: "logo.svg"}) {
-    //             publicURL
-    //         }
-    //     }
-
-    // `)
-    return (
-     
-       <Nav className="justify-content-center" activeKey= "/home" as="ul"
-         onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
-       
-       >
-
-           <Nav.Item>
-          
-            <ul className="sticky">
-                <logo>
-                <Link to = "/">
-                <img src = {logo}  alt="intelsnap" width="90" height="90"/>
-                </Link>
-                </logo>
-                <li className="hd" activeKey="/">
-                    <Link to = "/"> Home </Link>
-                </li>
-                <li className="hd" activeKey="/services">
-                    <Link to = "/services/"> Services </Link>
-                </li>
-                <li className="hd" active>
-                    <Link to = "/technologies/"> Technologies </Link>
-                </li>
-                <li className="hd">
-                    <Link to = "/media/"> Media </Link>
-                </li>
-                <li className="hd">
-                    <Link to = "/about/"> About </Link>
-                </li>
-                <li className="hd">
-                    <Link to = "/contact/"> Contact </Link>
-                </li>
-            </ul>
-
-            </Nav.Item>
-        
-  </Nav>
-    )
-}
+const Navbar = () => (
+  <div>
+    <Menu
+      theme="white"
+      mode="horizontal"
+      defaultSelectedKeys={['1']}
+      style={{
+        width: '100%',
+        background: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center',
+      }}
+    >
+      <Menu.Item>
+        <Link to="/">
+          <img src={logo} alt="intelsnap" width="90" height="50" />
+        </Link>
+      </Menu.Item>
+      <Menu.Item Selectedkey="1">
+        <Link to="/"> Home </Link>
+      </Menu.Item>
+      <Menu.Item key="2">
+        <Link to="/services/"> Expertise </Link>
+      </Menu.Item>
+      <Menu.Item key="3">
+        <Link to="/technologies/"> Market </Link>
+      </Menu.Item>
+      <Menu.Item key="4">
+        <Link to="/media/"> Media </Link>
+      </Menu.Item>
+      <Menu.Item key="5">
+        <Link to="/about/"> About </Link>
+      </Menu.Item>
+      <Menu.Item key="6">
+        <Link to="/contacts/"> Contact </Link>
+      </Menu.Item>
+    </Menu>
+  </div>
+)
 
 export default Navbar

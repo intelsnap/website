@@ -1,13 +1,3 @@
-.contact {
-  padding: 30px 0 0;
-}
-
-.contact-form {
-  background: #ccc;
-  position: relative;
-  z-index: 2;
-}
-
 .btn-submit {
   border: 3px solid rgb(39, 18, 230);
   color: rgb(241, 241, 247);
@@ -26,62 +16,11 @@
   transition: 0.5s;
 }
 
-.contact-option .form-control {
-  border-color: transparent;
-}
-
-/* .form-control {
-  width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-   overflow: scroll; 
-} */
-
 .contact-option-f {
-  border-right: 1px solid #0c0c0c;
   padding: 45px 64px;
 }
-.contact-option .form-control {
+.contact-optionf .form-control {
   border-color: transparent;
-}
-
-.contact-address {
-  padding: 45px 50px;
-}
-/* .contact-address h3 {
-  font-weight: 700;
-  margin: 0 0 24px;
-} */
-
-.contact-details {
-  margin-top: 20px;
-  color: #fff;
-  float: left;
-  padding: 5px;
-}
-
-/* .contact-details p {
-  color: #fff4e0;
-  padding: 0 30px 0 30px;
-} */
-
-.contact-center {
-  background: rgb(112 164 172 / 98%);
-  border-radius: 50%;
-  text-align: center;
-  width: 44px;
-  height: 44px;
-  padding: 10px 0;
-  color: #fff;
-  margin: 0 auto;
-  top: -17em;
-  left: -14px;
-  position: relative;
-  z-index: 10;
 }
 
 .icons {
@@ -95,10 +34,7 @@
     border: 0;
     padding: 20px 15px;
   }
-  .contact-option_rsp {
-    border-bottom: 1px solid #ccc;
-    padding: 5px 25px 30px;
-  }
+
   .contact-center {
     display: none;
   }

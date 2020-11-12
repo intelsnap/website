@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
-  font-family: "OpenSans", sans-serif;
+  font-family: 'OpenSans', sans-serif;
 }
 
 h1 {
@@ -13,41 +13,10 @@ p {
   line-height: 2;
 }
 
-.products-text {
-  color: yellowgreen;
-  line-height: 3;
-}
-.images {
-  text-align: center;
-  text-transform: capitalize;
-  width: 80vw;
-  margin: 0 auto 10rem auto;
-}
-.single-image {
-  border: 3px solid red;
-  padding: 1rem 0;
-}
-
 @media screen and (min-width: 992px) {
   .images {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 1rem;
-  }
-}
-.small {
-  width: 200px;
-}
-.single-product {
-  width: 90vw;
-  max-width: 1170px;
-  margin: 3rem auto;
-}
-
-@media screen and (min-width: 768px) {
-  .single-product {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    column-gap: 2rem;
   }
 }
