@@ -12,6 +12,8 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "react-hot-loader": "^4.8.3",
+    "@hot-loader/react-dom": "^16.8.6",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/fontawesome-free": "^5.15.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -26,9 +28,6 @@
     "gatsby-source-contentful": "^3.0.6",
     "gatsby-source-filesystem": "^2.3.37",
     "gatsby-transformer-sharp": "^2.5.20",
-    "global": "^4.4.0",
-    "i": "^0.3.6",
-    "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "react": "^16.14.0",
     "react-bootstrap": "^1.4.0",
@@ -38,14 +37,10 @@
     "typescript": "3.7.5"
   },
   "devDependencies": {
-    
-   
-    
-
-    "babel-plugin-styled-components": "^1.11.1",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
     "@typescript-eslint/parser": "^4.0.0",
     "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "^1.11.1",
     "eslint": "^7.8.1",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -62,7 +57,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
-    "eslint-plugin-react-hooks": "^4.1.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "peerdeps": "^1.1.1",
     "prettier": "^2.1.1",
     "xxxxx": "^1.0.3"

@@ -3,19 +3,26 @@ import React from 'react'
 import { Menu } from 'antd'
 import logo from '../assets/logo.svg'
 
+const activeStyles = {
+  color: 'rgb(24, 144, 255)',
+  borderBottom: '8px',
+  borderBottomColor: 'rgb(24, 144, 255)',
+  borderBottomWidth: '2px',
+  borderBottomStyle: 'solid',
+}
 const Navbar = () => (
   <div>
     <Menu
-      theme="white"
+      theme="light"
       mode="horizontal"
-      defaultSelectedKeys={['1']}
       style={{
+        position: 'sticky',
+        top: ' 0',
         width: '100%',
-        height: '8%',
+        height: '7%',
         background: 'white',
         fontWeight: 'bold',
         textAlign: 'center',
-        position: 'fixed',
       }}
     >
       <Menu.Item>
@@ -23,23 +30,41 @@ const Navbar = () => (
           <img src={logo} alt="intelsnap" width="90" height="50" />
         </Link>
       </Menu.Item>
-      <Menu.Item defaultSelectedkey="1">
-        <Link to="/"> Home </Link>
+      <Menu.Item key="1">
+        <Link to="/" activeClassName="active" activeStyle={activeStyles}>
+          {' '}
+          Home{' '}
+        </Link>
       </Menu.Item>
       <Menu.Item key="2">
-        <Link to="/services/"> Expertise </Link>
+        <Link to="/services/" activeStyle={activeStyles}>
+          {' '}
+          Expertise{' '}
+        </Link>
       </Menu.Item>
       <Menu.Item key="3">
-        <Link to="/technologies/"> Market </Link>
+        <Link to="/technologies/" key="3">
+          {' '}
+          Market{' '}
+        </Link>
       </Menu.Item>
       <Menu.Item key="4">
-        <Link to="/media/"> Media </Link>
+        <Link to="/media/" activeStyle={activeStyles}>
+          {' '}
+          Media{' '}
+        </Link>
       </Menu.Item>
       <Menu.Item key="5">
-        <Link to="/about/"> About </Link>
+        <Link to="/about/" activeStyle={activeStyles}>
+          {' '}
+          About{' '}
+        </Link>
       </Menu.Item>
-      <Menu.Item key="6">
-        <Link to="/contacts/"> Contact </Link>
+      <Menu.Item>
+        <Link to="/contacts/" activeStyle={activeStyles}>
+          {' '}
+          Contact{' '}
+        </Link>
       </Menu.Item>
     </Menu>
   </div>

@@ -189,18 +189,7 @@ const About = () => (
 
             <Row style={{ padding: '6px 12px' }}>
               <Col span={10}>
-                <Button>
-                  Attach CV
-                  <input
-                    type="file"
-                    className="upload up"
-                    id="up"
-                    name="cv"
-                    accept=".doc, .docx,.ppt, .pptx,.txt,.pdf"
-                    onChange="readURL(this);"
-                    style={{ display: 'none' }}
-                  />
-                </Button>
+                <Button>Attach CV</Button>
               </Col>
               <Col span={4} />
               <Col span={10}>

@@ -1,22 +1,20 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Row, Col, Menu } from 'antd'
+import { Row, Col } from 'antd'
 import '../utils/font-awesome'
 import styled from 'styled-components'
 import intel from '../images/intelf.png'
 
-const Footers = () => (
-  <Menu
-    theme="light"
-    mode="horizontal"
-    defaultSelectedKeys={['1']}
+const Footer = () => (
+  <div
+    className="Foot"
     style={{
       width: '100%',
       background: 'grey',
-
       paddingTop: '20px',
       color: 'white',
+      marginTop: '30px',
     }}
   >
     <Row>
@@ -34,7 +32,6 @@ const Footers = () => (
             marginTop: '20px',
           }}
         />
-
         <Row>
           <p
             style={{
@@ -43,7 +40,19 @@ const Footers = () => (
               marginLeft: '70px',
             }}
           >
-            Privacy Policy
+            <Link
+              to="/privacy"
+              activeStyle={{
+                color: 'rgb(24, 144, 255)',
+                borderBottom: '2px',
+                borderBottomColor: 'rgb(24, 144, 255)',
+                borderBottomWidth: '2px',
+                borderBottomStyle: 'solid',
+              }}
+              style={{ color: 'white' }}
+            >
+              Privacy Policy
+            </Link>
           </p>
         </Row>
       </Col>
@@ -61,13 +70,13 @@ const Footers = () => (
         </h2>
         <p>
           {' '}
-          <Link
-            to="https://github.com/intelsnap/Neo4jNet"
+          <a
+            href="https://github.com/intelsnap/Neo4jNet"
             target="blank"
             style={{ fontSize: '14px', color: 'white' }}
           >
             Neo4JNet
-          </Link>
+          </a>
         </p>
       </Col>
       <Col span={4}>
@@ -107,6 +116,7 @@ const Footers = () => (
           >
             <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" />
           </a>
+
           <a
             className="icons"
             href="https://myfavcoffeeplace.io"
@@ -114,6 +124,7 @@ const Footers = () => (
           >
             <FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" />
           </a>
+
           <a
             className="icons"
             href="https://github.com/intelsnap"
@@ -138,20 +149,22 @@ const Footers = () => (
           <a className="icons" href="support@intelsnap.com" target="blank">
             <FontAwesomeIcon icon="envelope" size="2x" />
           </a>
-          <a
-            className="icons"
-            href="https://www.instagram.com/intelsnap_media/"
-            target="blank"
-          >
-            <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
-          </a>
+          <nav>
+            <a
+              className="icons"
+              href="https://www.instagram.com/intelsnap_media/"
+              target="blank"
+            >
+              <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
+            </a>
+          </nav>
         </Ico>
         <Row>
           <p>Copyright 2020 Intelsnap Inc. All Rights Reserved.</p>
         </Row>
       </Col>
     </Row>
-  </Menu>
+  </div>
 )
 
 const Ico = styled.a`
@@ -166,4 +179,4 @@ const Ico = styled.a`
   }
 `
 
-export default Footers
+export default Footer
