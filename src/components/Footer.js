@@ -1,14 +1,32 @@
-import { Link } from 'gatsby'
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Row, Col } from 'antd'
-import '../utils/font-awesome'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
-import intel from '../images/intelf.png'
+import { Row, Col } from 'antd'
+import {
+  TwitterOutlined,
+  LinkedinFilled,
+  GithubFilled,
+  SlackSquareFilled,
+  YoutubeFilled,
+  MailOutlined,
+  InstagramFilled,
+} from '@ant-design/icons'
+
+const StyledIcons = styled.div`
+  .icons {
+    height: 20px;
+    padding: 08px;
+    color: white;
+    font-size: 0.8rem;
+    :hover {
+      color: black;
+      background-color: gray;
+    }
+  }
+`
 
 const Footer = () => (
   <div
-    className="Foot"
     style={{
       width: '100%',
       background: 'grey',
@@ -20,18 +38,6 @@ const Footer = () => (
     <Row>
       <Col span={3} />
       <Col span={3}>
-        <img
-          src={intel}
-          alt="intelf"
-          width="110"
-          height="82"
-          style={{
-            display: 'block',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            marginTop: '20px',
-          }}
-        />
         <Row>
           <p
             style={{
@@ -41,7 +47,7 @@ const Footer = () => (
             }}
           >
             <Link
-              to="/privacy"
+              to="/privacy-policy"
               activeStyle={{
                 color: 'rgb(24, 144, 255)',
                 borderBottom: '2px',
@@ -108,56 +114,35 @@ const Footer = () => (
         >
           Get In touch
         </h2>
-        <Ico>
-          <a
-            className="icons"
-            href="https://twitter.com/intelsnap_inc"
-            target="blank"
-          >
-            <FontAwesomeIcon icon={['fab', 'twitter']} size="2x" />
+        <StyledIcons>
+          <a href="https://twitter.com/intelsnap_inc" target="blank">
+            <TwitterOutlined />
           </a>
-
-          <a
-            className="icons"
-            href="https://myfavcoffeeplace.io"
-            target="blank"
-          >
-            <FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" />
+          <a href="https://myfavcoffeeplace.io" target="blank">
+            <LinkedinFilled />
           </a>
-
-          <a
-            className="icons"
-            href="https://github.com/intelsnap"
-            target="blank"
-          >
-            <FontAwesomeIcon icon={['fab', 'github']} size="2x" />
+          <a href="https://github.com/intelsnap" target="blank">
+            <GithubFilled />
           </a>
           <a
-            className="icons"
             href="https://intelsnap.slack.com/join/shared_invite/zt-iiqlbfgi-45A58ck5JHG9xsNqP52DIA#/"
             target="blank"
           >
-            <FontAwesomeIcon icon={['fab', 'slack']} size="2x" />
+            <SlackSquareFilled />
           </a>
           <a
-            className="icons"
             href="https://www.youtube.com/channel/UC8xFo5n_dKRYbG7OoM4QVbg/"
             target="blank"
           >
-            <FontAwesomeIcon icon={['fab', 'youtube']} size="2x" />
+            <YoutubeFilled />
           </a>
-          <a className="icons" href="support@intelsnap.com" target="blank">
-            <FontAwesomeIcon icon="envelope" size="2x" />
+          <a href="support@intelsnap.com" target="blank">
+            <MailOutlined />
           </a>
-
-          <a
-            className="icons"
-            href="https://www.instagram.com/intelsnap_media/"
-            target="blank"
-          >
-            <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
+          <a href="https://www.instagram.com/intelsnap_media/" target="blank">
+            <InstagramFilled />
           </a>
-        </Ico>
+        </StyledIcons>
         <Row>
           <p>Copyright 2020 Intelsnap Inc. All Rights Reserved.</p>
         </Row>
@@ -165,17 +150,5 @@ const Footer = () => (
     </Row>
   </div>
 )
-
-const Ico = styled.div`
-  .icons {
-    padding: 08px;
-    color: white;
-    font-size: 0.8rem;
-    :hover {
-      color: black;
-      background-color: gray;
-    }
-  }
-`
 
 export default Footer

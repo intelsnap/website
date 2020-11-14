@@ -1,12 +1,11 @@
 import React from 'react'
 import { Row, Col } from 'antd'
-import Layout from '../components/layout'
-import hom from '../images/home.png'
+import Layout from '../components/Layout'
+import hom from '../assets/home.png'
 
 const Home = () => (
   <Layout>
     <Row className="about-pic">
-      '
       <Col span={24}>
         <img
           src={hom}

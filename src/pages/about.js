@@ -1,10 +1,8 @@
 import React from 'react'
 import { Row, Col } from 'antd'
 import styled from 'styled-components'
-import Layout from '../components/layout'
-import about from '../images/about.png'
-import pic from '../images/image1.jpeg'
-import pic1 from '../images/image2.jpeg'
+import Layout from '../components/Layout'
+import about from '../assets/about.png'
 
 const Button = styled.button`
   padding: 3px;
@@ -26,18 +24,8 @@ const About = () => (
   <Layout>
     <div className="about" style={{ textAlign: 'justify' }}>
       <Row className="about-pic">
-        '
         <Col span={24}>
-          <img
-            src={about}
-            alt="about"
-            width="100%"
-            height="100%"
-            style={{
-              paddingLeft: '15px',
-              paddingRight: '10px',
-            }}
-          />
+          <img src={about} alt="about" width="100%" height="100%" />
         </Col>
       </Row>
       <Row>
@@ -68,20 +56,7 @@ const About = () => (
       </Row>
       <Row>
         <Col span={3}> </Col>
-        <Col span={4}>
-          {' '}
-          <img
-            src={pic1}
-            alt="Sahar-Zafar"
-            width="70%"
-            height="50%"
-            style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            }}
-          />{' '}
-        </Col>
+        <Col span={4}> </Col>
         <Col span={11}>
           <h4
             style={{
@@ -113,20 +88,7 @@ const About = () => (
       </Row>
       <Row>
         <Col span={3}> </Col>
-        <Col span={4}>
-          {' '}
-          <img
-            src={pic}
-            alt="Arif-Hanif"
-            width="70%"
-            height="50%"
-            style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            }}
-          />{' '}
-        </Col>
+        <Col span={4}> </Col>
         <Col span={11}>
           <h4
             style={{
