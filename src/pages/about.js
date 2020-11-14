@@ -1,10 +1,8 @@
 import React from 'react'
 import { Row, Col } from 'antd'
 import styled from 'styled-components'
-import Layout from '../components/layout'
-import about from '../images/about.png'
-import pic from '../images/image1.jpeg'
-import pic1 from '../images/image2.jpeg'
+import Layout from '../components/Layout'
+import aboutBanner from '../assets/about.png'
 
 const Button = styled.button`
   padding: 3px;
@@ -24,24 +22,14 @@ const Button = styled.button`
 
 const About = () => (
   <Layout>
-    <div className="about" style={{ textAlign: 'justify' }}>
-      <Row className="about-pic">
-        '
+    <div style={{ textAlign: 'justify' }}>
+      <Row>
         <Col span={24}>
-          <img
-            src={about}
-            alt="about"
-            width="100%"
-            height="100%"
-            style={{
-              paddingLeft: '15px',
-              paddingRight: '10px',
-            }}
-          />
+          <img src={aboutBanner} alt="about" width="100%" height="100%" />
         </Col>
       </Row>
       <Row>
-        <Col span={3}> </Col>
+        <Col span={3} />
         <Col span={12}>
           <h1 style={{ fontSize: '36px' }}> Fueled by innovation </h1>
           <p
@@ -52,7 +40,6 @@ const About = () => (
               fontSize: '35px',
             }}
           >
-            {' '}
             Your partner in a fast-paced, digital world
           </p>
         </Col>
@@ -61,27 +48,13 @@ const About = () => (
         <Col span={3}> </Col>
         <Col span={12}>
           <h1 style={{ marginTop: '20px', paddingBottom: '10px' }}>
-            {' '}
-            Leadership team{' '}
+            Leadership team
           </h1>
         </Col>
       </Row>
       <Row>
         <Col span={3}> </Col>
-        <Col span={4}>
-          {' '}
-          <img
-            src={pic1}
-            alt="Sahar-Zafar"
-            width="70%"
-            height="50%"
-            style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            }}
-          />{' '}
-        </Col>
+        <Col span={4}> </Col>
         <Col span={11}>
           <h4
             style={{
@@ -91,11 +64,9 @@ const About = () => (
               fontWeight: 'bold',
             }}
           >
-            {' '}
-            Dr. Sahar Zafar - Founder & CEO{' '}
+            Dr. Sahar Zafar - Founder & CEO
           </h4>
           <p>
-            {' '}
             With over ten years of experience as a Project Manager and Human
             Subjects Protection Scientist (HSPS). Managing biodefense and
             biotechnology projects under the Department of Defense (DoD),
@@ -113,20 +84,7 @@ const About = () => (
       </Row>
       <Row>
         <Col span={3}> </Col>
-        <Col span={4}>
-          {' '}
-          <img
-            src={pic}
-            alt="Arif-Hanif"
-            width="70%"
-            height="50%"
-            style={{
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            }}
-          />{' '}
-        </Col>
+        <Col span={4}> </Col>
         <Col span={11}>
           <h4
             style={{
@@ -136,11 +94,9 @@ const About = () => (
               fontWeight: 'bold',
             }}
           >
-            {' '}
-            Arif Hanif - Co-Founder & CTO{' '}
+            Arif Hanif - Co-Founder & CTO
           </h4>
           <p>
-            {' '}
             Arif is an engineer with the heart of an entrepreneur. His passion
             for transforming businesses through software solutions that drive
             exceptional results for clients has fueled our firm's high quality
@@ -165,10 +121,9 @@ const About = () => (
         <Col span={6}>
           <h2 style={{ paddingTop: '20px' }}> Pitch yourself </h2>
           <form name="contacts" method="post">
-            <div className="form-group" style={{ padding: '6px 12px' }}>
+            <div style={{ padding: '6px 12px' }}>
               <input
                 type="text"
-                className="form-control"
                 placeholder="Name"
                 name="name"
                 required
@@ -176,10 +131,9 @@ const About = () => (
               />
             </div>
             {/* <!-- // end .form-group --> */}
-            <div className="form-group" style={{ padding: '6px 12px' }}>
+            <div style={{ padding: '6px 12px' }}>
               <input
                 type="email"
-                className="form-control"
                 placeholder="Email"
                 name="email"
                 required
@@ -195,7 +149,6 @@ const About = () => (
               <Col span={10}>
                 <button
                   type="submit"
-                  className="btn-s"
                   style={{
                     padding: '3px',
                     width: '100%',
@@ -205,8 +158,7 @@ const About = () => (
                     Hover: 'blue',
                   }}
                 >
-                  {' '}
-                  Submit{' '}
+                  Submit
                 </button>
               </Col>
             </Row>

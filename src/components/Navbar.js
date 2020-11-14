@@ -1,18 +1,20 @@
-import { Link } from 'gatsby'
-import React from 'react'
+import { Link, Location } from 'gatsby'
+import React, { useState } from 'react'
 import { Menu } from 'antd'
-import logo from '../assets/logo.svg'
 
-const activeStyles = {
-  color: 'rgb(24, 144, 255)',
-  borderBottom: '2px',
-  borderBottomColor: 'rgb(24, 144, 255)',
-  borderBottomWidth: '2px',
-  borderBottomStyle: 'solid',
-  borderBottomStart: '4px',
-}
-const Navbar = () => (
-  <div>
+const menu = [
+  { title: 'Home', route: '/' },
+  { title: 'Expertise', route: '/expertise' },
+  { title: 'Markets', route: '/markets' },
+  { title: 'Media', route: '/media' },
+  { title: 'About', route: '/about' },
+  { title: 'Contact', route: '/contact' },
+]
+
+const Navbar = (props) => {
+  const [activeNavLink, setActiveNavLink] = useState('')
+  console.log(props)
+  return (
     <Menu
       theme="light"
       mode="horizontal"
@@ -20,55 +22,19 @@ const Navbar = () => (
         position: 'sticky',
         top: ' 0',
         width: '100%',
-        height: '7%',
+        height: '8%',
         background: 'white',
         fontWeight: 'bold',
-        textAlign: 'center',
       }}
+      selectedKeys={[activeNavLink]}
     >
-      <Menu.Item>
-        <Link to="/">
-          <img src={logo} alt="intelsnap" width="90" height="50" />
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="1">
-        <Link to="/" activeClassName="active" activeStyle={activeStyles}>
-          {' '}
-          Home{' '}
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="2">
-        <Link to="/services/" activeStyle={activeStyles}>
-          {' '}
-          Expertise{' '}
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="3">
-        <Link to="/technologies/" key="3">
-          {' '}
-          Market{' '}
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="4">
-        <Link to="/media/" activeStyle={activeStyles}>
-          {' '}
-          Media{' '}
-        </Link>
-      </Menu.Item>
-      <Menu.Item key="5">
-        <Link to="/about/" activeStyle={activeStyles}>
-          {' '}
-          About{' '}
-        </Link>
-      </Menu.Item>
-      <Menu.Item>
-        <Link to="/contacts/" activeStyle={activeStyles}>
-          {' '}
-          Contact{' '}
-        </Link>
-      </Menu.Item>
+      {menu.map(({ title, route }) => (
+        <Menu.Item key={route}>
+          <Link to={route}>{title}</Link>
+        </Menu.Item>
+      ))}
     </Menu>
-  </div>
-)
+  )
+}
 
 export default Navbar

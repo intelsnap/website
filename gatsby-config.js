@@ -1,13 +1,9 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
     title: 'Intelsnap Inc.',
-    description: 'Intelligence at a snap',
-    author: '@Laeeq',
+    description: 'Intelligence at a snap.',
+    author: 'intelsnap',
+    siteUrl: 'https://intelsnap.com',
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -16,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
       },
     },
   ],

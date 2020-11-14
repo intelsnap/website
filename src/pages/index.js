@@ -1,16 +1,15 @@
 import React from 'react'
 import { Row, Col } from 'antd'
-import Layout from '../components/layout'
-import hom from '../images/homet.png'
-import img from '../images/image3.jpeg'
+import Layout from '../components/Layout'
+import img from '../assets/image3.jpeg'
+import homeBanner from '../assets/home.png'
 
 const Home = () => (
   <Layout>
-    <Row className="about-pic">
-      '
+    <Row>
       <Col span={24}>
         <img
-          src={hom}
+          src={homeBanner}
           alt="about"
           width="100%"
           height="100%"
@@ -24,8 +23,7 @@ const Home = () => (
         <h1
           style={{ fontSize: '26px', textAlign: 'center', marginTop: '50px' }}
         >
-          {' '}
-          Consulting{' '}
+          Consulting
         </h1>
         <img
           src={img}
@@ -47,7 +45,6 @@ const Home = () => (
               paddingTop: '15px',
             }}
           >
-            {' '}
             Leverage our expert knowledge in ...
           </p>
         </Row>
@@ -70,8 +67,7 @@ const Home = () => (
         <h1
           style={{ fontSize: '26px', textAlign: 'center', marginTop: '50px' }}
         >
-          {' '}
-          Digital Transformation{' '}
+          Digital Transformation
         </h1>
         <img
           src={img}
@@ -94,7 +90,6 @@ const Home = () => (
               paddingTop: '15px',
             }}
           >
-            {' '}
             Collaborate with us to craft your strategic roadmap for innovation
             with digital design technology.
           </p>
@@ -142,7 +137,6 @@ const Home = () => (
               paddingTop: '15px',
             }}
           >
-            {' '}
             Work with us to develop tools that will accelerate your workflow
             using automation and computational design.
           </p>
