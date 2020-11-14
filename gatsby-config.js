@@ -31,14 +31,6 @@ module.exports = {
         link: `/contact`,
       },
     ],
-    tools: {
-      github: '',
-      slack: '',
-      twitter: '',
-      youtube: '',
-      linkedIn: '',
-      instagram: '',
-    },
   },
   plugins: [
     `gatsby-plugin-styled-components`,

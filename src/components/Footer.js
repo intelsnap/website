@@ -12,16 +12,15 @@ import {
   InstagramFilled,
 } from '@ant-design/icons'
 
-const StyledIcons = styled.div`
-  .icons {
-    height: 20px;
-    padding: 08px;
+const StyledIcon = styled.a`
+  color: white;
+  font-size: 1.4rem;
+  margin: 5px;
+  :link {
     color: white;
-    font-size: 0.8rem;
-    :hover {
-      color: black;
-      background-color: gray;
-    }
+  }
+  :hover {
+    color: black;
   }
 `
 
@@ -114,35 +113,33 @@ const Footer = () => (
         >
           Get In touch
         </h2>
-        <StyledIcons>
-          <a href="https://twitter.com/intelsnap_inc" target="blank">
-            <TwitterOutlined />
-          </a>
-          <a href="https://myfavcoffeeplace.io" target="blank">
-            <LinkedinFilled />
-          </a>
-          <a href="https://github.com/intelsnap" target="blank">
-            <GithubFilled />
-          </a>
-          <a
-            href="https://intelsnap.slack.com/join/shared_invite/zt-iiqlbfgi-45A58ck5JHG9xsNqP52DIA#/"
-            target="blank"
-          >
-            <SlackSquareFilled />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UC8xFo5n_dKRYbG7OoM4QVbg/"
-            target="blank"
-          >
-            <YoutubeFilled />
-          </a>
-          <a href="support@intelsnap.com" target="blank">
-            <MailOutlined />
-          </a>
-          <a href="https://www.instagram.com/intelsnap_media/" target="blank">
-            <InstagramFilled />
-          </a>
-        </StyledIcons>
+        <StyledIcon href="https://twitter.com/intelsnap_inc" target="blank">
+          <TwitterOutlined />
+        </StyledIcon>
+        <StyledIcon href="https://myfavcoffeeplace.io" target="blank">
+          <LinkedinFilled />
+        </StyledIcon>
+        <StyledIcon href="https://github.com/intelsnap" target="blank">
+          <GithubFilled />
+        </StyledIcon>
+        <StyledIcon
+          href="https://intelsnap.slack.com/join/shared_invite/zt-iiqlbfgi-45A58ck5JHG9xsNqP52DIA#/"
+          target="blank"
+        >
+          <SlackSquareFilled />
+        </StyledIcon>
+        <StyledIcon
+          href="https://www.youtube.com/channel/UC8xFo5n_dKRYbG7OoM4QVbg/"
+          target="blank"
+        >
+          <YoutubeFilled />
+        </StyledIcon>
+        <StyledIcon
+          href="https://www.instagram.com/intelsnap_media/"
+          target="blank"
+        >
+          <InstagramFilled />
+        </StyledIcon>
         <Row>
           <p>Copyright 2020 Intelsnap Inc. All Rights Reserved.</p>
         </Row>
