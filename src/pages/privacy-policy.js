@@ -4,7 +4,6 @@ import Layout from '../components/Layout'
 const PrivacyPolicy = () => (
   <Layout>
     <div
-      className="cont"
       style={{
         textAlign: 'justify',
         padding: '0px 10px',
@@ -18,36 +17,31 @@ const PrivacyPolicy = () => (
           fontWeight: '600',
         }}
       >
-        {' '}
-        Privacy Policy{' '}
+        Privacy Policy
       </h1>
 
       <h2> Privacy Notice </h2>
       <p>
-        This privacy notice discloses the privacy practices for{' '}
+        This privacy notice discloses the privacy practices for
         <a href="https://intepsnap.com"> https://intepsnap.com </a>This privacy
         notice applies solely to information collected by this website. It will
         notify you of the following:
       </p>
       <ol>
         <li>
-          {' '}
           What personally identifiable information is collected from you through
           the website, how it is used and with whom it may be shared.
         </li>
         <li>
-          {' '}
           What choices are available to you regarding the use of your data.
         </li>
         <li>
-          {' '}
           The security procedures in place to protect the misuse of your
           information.
         </li>
         <li> How you can correct any inaccuracies in the information.</li>
       </ol>
       <h2> Information Collection, Use, and Sharing </h2>
-
       <p>
         We are the sole owners of the information collected on this site. We
         only have access to/collect information that you voluntarily give us via
@@ -65,7 +59,6 @@ const PrivacyPolicy = () => (
         tell you about specials, new products or services, or changes to this
         privacy policy.
       </p>
-
       <h2> Your Access to and Control Over Information </h2>
       <p>
         You may opt out of any future contacts from us at any time. You can do
@@ -78,15 +71,12 @@ const PrivacyPolicy = () => (
         <li>Have us delete any data we have about you.</li>
         <li>Express any concern you have about our use of your data.</li>
       </ul>
-
       <h2> Security </h2>
-
       <p>
         We take precautions to protect your information. When you submit
         sensitive information via the website, your information is protected
         both online and offline.
       </p>
-
       <p>
         Wherever we collect sensitive information (such as credit card data),
         that information is encrypted and transmitted to a trusted third party
@@ -102,10 +92,8 @@ const PrivacyPolicy = () => (
         identifiable information. The computers/servers in which we store
         personally identifiable information are kept in a secure environment.
       </p>
-
       <h2> Registration </h2>
       <p>
-        {' '}
         In order to use this website, a user must first complete the
         registration form. During registration a user is required to give
         certain information (such as name and email address). This information
@@ -114,7 +102,6 @@ const PrivacyPolicy = () => (
         demographic information (such as gender or age) about yourself, but it
         is not required.
       </p>
-
       <h2> Orders </h2>
       <p>
         We request information from you on our order form. To buy from us, you
@@ -124,7 +111,6 @@ const PrivacyPolicy = () => (
         have trouble processing an order, we’ll use this information to contact
         you.
       </p>
-
       <h2> Cookies </h2>
       <p>
         We use “cookies” on this site. A cookie is a piece of data stored on a
@@ -138,10 +124,8 @@ const PrivacyPolicy = () => (
         use cookies on our site. However, we have no access to or control over
         these cookies.
       </p>
-
       <h2> Sharing </h2>
       <p>Intelsnap Inc. does not share your data with any third party.</p>
-
       <h2> Links </h2>
       <p>
         This website contains links to other sites. Please be aware that we are

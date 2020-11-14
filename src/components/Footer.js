@@ -8,7 +8,6 @@ import {
   GithubFilled,
   SlackSquareFilled,
   YoutubeFilled,
-  MailOutlined,
   InstagramFilled,
 } from '@ant-design/icons'
 
