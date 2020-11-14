@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React, { useState } from 'react'
+import React from 'react'
 import { Menu } from 'antd'
 
 const menu = [
