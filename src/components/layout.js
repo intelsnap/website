@@ -41,7 +41,7 @@ export default Layout
 Layout.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.arrayOf(PropTypes.element),
     PropTypes.element,
+    PropTypes.arrayOf(PropTypes.element),
   ]).isRequired,
 }

@@ -1,29 +1,19 @@
-import { Link } from 'gatsby'
-import React from 'react'
+import { Link, Location } from 'gatsby'
+import React, { useState } from 'react'
 import { Menu } from 'antd'
 
 const menu = [
-  { title: 'Home' },
-  { title: 'Expertise' },
-  { title: 'Markets' },
-  { title: 'Media' },
-  { title: 'About' },
-  { title: 'Contact' },
+  { title: 'Home', route: '/' },
+  { title: 'Expertise', route: '/expertise' },
+  { title: 'Markets', route: '/markets' },
+  { title: 'Media', route: '/media' },
+  { title: 'About', route: '/about' },
+  { title: 'Contact', route: '/contact' },
 ]
 
-const Navbar = () => {
-  const convertKey = (title) => {
-    const cleanedTitle = title
-      .replace(/([a-z])([A-Z])/g, '$1-$2') // get all lowercase letters that are near to uppercase ones
-      .replace(/[\s_]+/g, '-') // replace all spaces and low dash
-      .toLowerCase()
-
-    if (cleanedTitle === 'home') {
-      return '/'
-    }
-    return `/${cleanedTitle}`
-  }
-
+const Navbar = (props) => {
+  const [activeNavLink, setActiveNavLink] = useState('')
+  console.log(props)
   return (
     <Menu
       theme="light"
@@ -32,15 +22,15 @@ const Navbar = () => {
         position: 'sticky',
         top: ' 0',
         width: '100%',
-        height: '60px',
+        height: '8%',
         background: 'white',
         fontWeight: 'bold',
-        textAlign: 'center',
       }}
+      selectedKeys={[activeNavLink]}
     >
-      {menu.map(({ title }) => (
-        <Menu.Item key={convertKey(title)}>
-          <Link to={convertKey(title)}>{title}</Link>
+      {menu.map(({ title, route }) => (
+        <Menu.Item key={route}>
+          <Link to={route}>{title}</Link>
         </Menu.Item>
       ))}
     </Menu>

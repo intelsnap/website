@@ -40,7 +40,6 @@ const About = () => (
               fontSize: '35px',
             }}
           >
-            {' '}
             Your partner in a fast-paced, digital world
           </p>
         </Col>
@@ -49,7 +48,6 @@ const About = () => (
         <Col span={3}> </Col>
         <Col span={12}>
           <h1 style={{ marginTop: '20px', paddingBottom: '10px' }}>
-            {' '}
             Leadership team
           </h1>
         </Col>
@@ -66,11 +64,9 @@ const About = () => (
               fontWeight: 'bold',
             }}
           >
-            {' '}
             Dr. Sahar Zafar - Founder & CEO
           </h4>
           <p>
-            {' '}
             With over ten years of experience as a Project Manager and Human
             Subjects Protection Scientist (HSPS). Managing biodefense and
             biotechnology projects under the Department of Defense (DoD),
@@ -98,11 +94,9 @@ const About = () => (
               fontWeight: 'bold',
             }}
           >
-            {' '}
             Arif Hanif - Co-Founder & CTO
           </h4>
           <p>
-            {' '}
             Arif is an engineer with the heart of an entrepreneur. His passion
             for transforming businesses through software solutions that drive
             exceptional results for clients has fueled our firm's high quality
@@ -167,8 +161,7 @@ const About = () => (
                     Hover: 'blue',
                   }}
                 >
-                  {' '}
-                  Submit{' '}
+                  Submit
                 </button>
               </Col>
             </Row>
