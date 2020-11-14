@@ -1,50 +1,38 @@
 import React from 'react'
-import { Row } from 'antd'
+import { Row, Col } from 'antd'
 import Layout from '../components/layout'
-import intel from '../images/intelf.png'
+import hom from '../images/home.png'
 
 const Home = () => (
   <Layout>
+    <Row className="about-pic">
+      '
+      <Col span={24}>
+        <img
+          src={hom}
+          alt="about"
+          width="100%"
+          height="100%"
+          style={{ paddingLeft: '03px', paddingRight: '01px' }}
+        />
+      </Col>
+    </Row>
     <Row>
-      <div
-        className="cont"
-        style={{
-          textAlign: 'justify',
-          padding: '0px 10px',
-          margin: '0px 270px',
-        }}
-      >
-        <h1
+      <Col span={3}> </Col>
+      <Col span={12}>
+        <h1 style={{ fontSize: '36px' }}> Starting Home </h1>
+        <p
           style={{
-            color: 'black',
+            textAlign: 'justify',
+            paddingTop: 'none',
             textTransform: 'capitalize',
-            fontWeight: '600',
-            margin: '30px',
+            fontSize: '35px',
           }}
         >
           {' '}
-          Home started on work{' '}
-        </h1>
-
-        <h2> Privacy Notice </h2>
-        <p>
-          This privacy notice discloses the privacy practices for{' '}
-          <a href="https://intepsnap.com"> https://intepsnap.com </a>This
-          privacy notice applies solely to information collected by this
-          website. It will notify you of the following:
+          Your partner in a fast-paced, digital world
         </p>
-      </div>
-      <img
-        src={intel}
-        alt="Arif-Hanif"
-        width="70%"
-        height="50%"
-        style={{
-          display: 'block',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-        }}
-      />
+      </Col>
     </Row>
   </Layout>
 )

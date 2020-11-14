@@ -5,10 +5,11 @@ import logo from '../assets/logo.svg'
 
 const activeStyles = {
   color: 'rgb(24, 144, 255)',
-  borderBottom: '8px',
+  borderBottom: '2px',
   borderBottomColor: 'rgb(24, 144, 255)',
   borderBottomWidth: '2px',
   borderBottomStyle: 'solid',
+  borderBottomStart: '4px',
 }
 const Navbar = () => (
   <div>

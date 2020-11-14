@@ -2,8 +2,6 @@ import React from 'react'
 import { Row, Col } from 'antd'
 import Layout from '../components/layout'
 import cont from '../images/contact.png'
-
-import '../utils/font-awesome'
 import 'antd/dist/antd.css'
 import { ButonCon, ContactConf } from './contacts.styled'
 

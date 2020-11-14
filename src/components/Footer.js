@@ -149,15 +149,14 @@ const Footer = () => (
           <a className="icons" href="support@intelsnap.com" target="blank">
             <FontAwesomeIcon icon="envelope" size="2x" />
           </a>
-          <nav>
-            <a
-              className="icons"
-              href="https://www.instagram.com/intelsnap_media/"
-              target="blank"
-            >
-              <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
-            </a>
-          </nav>
+
+          <a
+            className="icons"
+            href="https://www.instagram.com/intelsnap_media/"
+            target="blank"
+          >
+            <FontAwesomeIcon icon={['fab', 'instagram']} size="2x" />
+          </a>
         </Ico>
         <Row>
           <p>Copyright 2020 Intelsnap Inc. All Rights Reserved.</p>
@@ -167,7 +166,7 @@ const Footer = () => (
   </div>
 )
 
-const Ico = styled.a`
+const Ico = styled.div`
   .icons {
     padding: 08px;
     color: white;
