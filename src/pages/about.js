@@ -2,7 +2,7 @@ import React from 'react'
 import { Row, Col } from 'antd'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
-import about from '../assets/about.png'
+import aboutBanner from '../assets/about.png'
 
 const Button = styled.button`
   padding: 3px;
@@ -25,11 +25,11 @@ const About = () => (
     <div className="about" style={{ textAlign: 'justify' }}>
       <Row className="about-pic">
         <Col span={24}>
-          <img src={about} alt="about" width="100%" height="100%" />
+          <img src={aboutBanner} alt="about" width="100%" height="100%" />
         </Col>
       </Row>
       <Row>
-        <Col span={3}> </Col>
+        <Col span={3} />
         <Col span={12}>
           <h1 style={{ fontSize: '36px' }}> Fueled by innovation </h1>
           <p
@@ -50,7 +50,7 @@ const About = () => (
         <Col span={12}>
           <h1 style={{ marginTop: '20px', paddingBottom: '10px' }}>
             {' '}
-            Leadership team{' '}
+            Leadership team
           </h1>
         </Col>
       </Row>
@@ -67,7 +67,7 @@ const About = () => (
             }}
           >
             {' '}
-            Dr. Sahar Zafar - Founder & CEO{' '}
+            Dr. Sahar Zafar - Founder & CEO
           </h4>
           <p>
             {' '}
@@ -99,7 +99,7 @@ const About = () => (
             }}
           >
             {' '}
-            Arif Hanif - Co-Founder & CTO{' '}
+            Arif Hanif - Co-Founder & CTO
           </h4>
           <p>
             {' '}
