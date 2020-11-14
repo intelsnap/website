@@ -22,8 +22,8 @@ const Button = styled.button`
 
 const About = () => (
   <Layout>
-    <div className="about" style={{ textAlign: 'justify' }}>
-      <Row className="about-pic">
+    <div style={{ textAlign: 'justify' }}>
+      <Row>
         <Col span={24}>
           <img src={aboutBanner} alt="about" width="100%" height="100%" />
         </Col>
@@ -121,10 +121,9 @@ const About = () => (
         <Col span={6}>
           <h2 style={{ paddingTop: '20px' }}> Pitch yourself </h2>
           <form name="contacts" method="post">
-            <div className="form-group" style={{ padding: '6px 12px' }}>
+            <div style={{ padding: '6px 12px' }}>
               <input
                 type="text"
-                className="form-control"
                 placeholder="Name"
                 name="name"
                 required
@@ -132,10 +131,9 @@ const About = () => (
               />
             </div>
             {/* <!-- // end .form-group --> */}
-            <div className="form-group" style={{ padding: '6px 12px' }}>
+            <div style={{ padding: '6px 12px' }}>
               <input
                 type="email"
-                className="form-control"
                 placeholder="Email"
                 name="email"
                 required
@@ -151,7 +149,6 @@ const About = () => (
               <Col span={10}>
                 <button
                   type="submit"
-                  className="btn-s"
                   style={{
                     padding: '3px',
                     width: '100%',

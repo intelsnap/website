@@ -45,7 +45,7 @@ export const Ico = styled.a`
 
 const Contacts = () => (
   <Layout>
-    <Row className="about-pic">
+    <Row>
       <Col span={24}>
         <img
           src={cont}
@@ -56,18 +56,16 @@ const Contacts = () => (
         />
       </Col>
     </Row>
-    <section className="contact">
+    <section>
       <Row>
         <Col span={1}> </Col>
-
         <Col span={10}>
           <ContactConf>
             {/* <h1> Contact </h1> */}
             <form name="contacts" method="post">
-              <div className="form-group">
+              <div>
                 <input
                   type="text"
-                  className="form-control"
                   placeholder="Name"
                   name="name"
                   required
@@ -79,10 +77,9 @@ const Contacts = () => (
                 />
               </div>
               {/* <!-- // end .form-group --> */}
-              <div className="form-group">
+              <div>
                 <input
                   type="email"
-                  className="form-control"
                   placeholder="Email"
                   name="email"
                   required
@@ -94,10 +91,9 @@ const Contacts = () => (
                 />
               </div>
 
-              <div className="form-group">
+              <div>
                 <textarea
                   placeholder="Message"
-                  className="form-control"
                   name="message"
                   required
                   rows="6"
