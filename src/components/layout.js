@@ -1,42 +1,36 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import Navbar from './Navbar'
-import Footer from './Footer'
-import 'antd/dist/antd.css'
 
-export const StyledContainer = styled.div`
-  .body {
-    font-family: 'OpenSans', sans-serif;
+import { GlobalStyle } from './misc/GlobalStyle'
+import { Header } from './Header'
+import { Footer } from './Footer'
 
-    .h1 {
-      text-transform: capitalize;
-      font: 28px;
-    }
-
-    @media screen and (min-width: 992px) {
-      .images {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 1rem;
-      }
-    }
-  }
+const MainContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: #fff;
 `
 
-export const Content = styled.div`
-  background-color: white;
-  padding-bottom: 30px;
+const Content = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  width: 100%;
 `
 
-const Layout = ({ children }) => (
-  <StyledContainer>
-    <Navbar />
-    {children}
-    <Footer />
-  </StyledContainer>
+export const Layout = ({ children }) => (
+  <>
+    <GlobalStyle />
+    <Header />
+    <MainContentWrapper>
+      <Content>{children}</Content>
+      <Footer />
+    </MainContentWrapper>
+  </>
 )
-export default Layout
 
 Layout.propTypes = {
   children: PropTypes.oneOfType([

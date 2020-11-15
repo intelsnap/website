@@ -1,9 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: 'Intelsnap Inc.',
-    description: 'Intelligence at a snap.',
-    author: 'intelsnap',
-    siteUrl: 'https://intelsnap.com',
+    title: 'Snaplytic',
+    description: 'We help companies with intelligent solutions.',
+    author: 'snaplytic-io',
+    siteUrl: 'https://snaplytic.io',
+    navigation: [
+      { title: 'Home', route: '/' },
+      { title: 'Expertise', route: '/expertise' },
+      { title: 'Markets', route: '/markets' },
+      { title: 'Media', route: '/media' },
+      { title: 'About', route: '/about' },
+      { title: 'Contact', route: '/contact' },
+    ],
   },
   plugins: [
     `gatsby-plugin-styled-components`,
