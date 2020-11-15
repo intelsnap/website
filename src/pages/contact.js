@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Layout } from '../components/Layout'
+import { Layout } from '../components/core/Layout'
 import contactBanner from '../assets/contact.png'
 
 const Contact = () => (
