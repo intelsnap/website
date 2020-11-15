@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 import { CloseOutlined, MenuOutlined } from '@ant-design/icons'
 
-import { useScroll } from './misc/useScroll'
+import { useScroll } from '../misc/useScroll'
 
 export const Header = () => {
   const [enableShadow, setEnableShadow] = useState(false)
