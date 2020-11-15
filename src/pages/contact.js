@@ -100,7 +100,9 @@ const Contacts = () => (
                   style={{ width: '100%', padding: '6px 12px' }}
                 />
               </div>
-              <ButonCon> Send Message </ButonCon>
+              <a href="mailto:starsleo18@gmail.com">
+                <ButonCon> Send Message </ButonCon>
+              </a>
             </form>
           </ContactConf>
         </Col>
