@@ -3,6 +3,7 @@ import { Row, Col } from 'antd'
 import { Layout } from '../components/core/Layout'
 import homeBanner from '../assets/home.png'
 import img from '../assets/image3.jpeg'
+import 'antd/dist/antd.css'
 
 const Home = () => (
   <Layout>
