@@ -46,8 +46,8 @@ const StyledIcon = styled.img`
   font-size: 0.8rem;
   margin: 10px;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   background-size: cover;
   :hover {
     background-color: #646d98;
