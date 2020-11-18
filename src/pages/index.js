@@ -1,11 +1,18 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import { Layout } from '../components/core/Layout'
 import homeBanner from '../assets/home.png'
 import img from '../assets/image-icon.jpg'
+import Seo from '../components/misc/Seo'
 
 const Home = () => (
   <Layout>
+    <Helmet>
+      <title>Snaplytic | Home</title>
+      <meta name="description" content="Snaplytic | Home" />
+    </Helmet>
+    <Seo />
     <img
       src={homeBanner}
       alt="about"

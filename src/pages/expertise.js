@@ -1,10 +1,16 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { Col, Row } from 'antd'
 import { Layout } from '../components/core/Layout'
 import expertPic from '../assets/expertise.png'
 
 const Expertise = () => (
   <Layout>
+    <Helmet>
+      <meta Utf="8" />
+      <title>Snaplytic | Expertise</title>
+      <meta name="description" content="Snaplytic | Expertise" />
+    </Helmet>
     <Row>
       <Col span={3} />
       <Col span={9} style={{ marginTop: '70px', marginBottom: '30px' }}>

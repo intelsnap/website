@@ -1,9 +1,14 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import styled from 'styled-components'
 import { Layout } from '../components/core/Layout'
 
 const NotFoundPage = () => (
   <Layout>
+    <Helmet>
+      <title>"Snaplytic | 404"</title>
+      <meta name="description" content="Snaplytic | 404" />
+    </Helmet>
     <Container>
       <Content>
         <p>You entered a route that does not exist...</p>

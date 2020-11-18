@@ -1,8 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { Layout } from '../components/core/Layout'
 
 const PrivacyPolicy = () => (
   <Layout>
+    <Helmet>
+      <title>Snaplytic | Privacy-Policy</title>
+      <meta name="description" content="Snaplytic | Privacy-Policy" />
+    </Helmet>
     <h1>Privacy Policy</h1>
     <h2>Privacy Notice</h2>
     <p>

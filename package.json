@@ -15,7 +15,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@ant-design/icons": "^4.3.0",
     "antd": "^4.8.2",
     "gatsby": "^2.26.1",
     "gatsby-image": "^2.5.0",
@@ -26,6 +25,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-helmet": "^6.1.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
