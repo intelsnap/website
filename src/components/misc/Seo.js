@@ -75,10 +75,10 @@ const Seo = ({ title, description, author, siteUrl, keywords }) => (
 
 Seo.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  siteUrl: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  keywords: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  siteUrl: PropTypes.string,
+  author: PropTypes.string,
+  keywords: PropTypes.string,
 }
 
 export default Seo
