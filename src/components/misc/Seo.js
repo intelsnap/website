@@ -16,11 +16,12 @@ const DetailsQuery = graphql`
   }
 `
 
-const Seo = ({ description, author, siteUrl, keywords }) => (
+const Seo = ({ title, description, author, siteUrl, keywords }) => (
   <StaticQuery
     query={DetailsQuery}
     render={(data) => {
       const metaDescription = description || data.site.siteMetadata.description
+      const metaTitle = title || data.site.siteMetadata.title
       const metaAuthor = author || data.site.siteMetadata.author
       const metaUrl = siteUrl || data.site.siteMetadata.siteUrl
       const metaKeywords = keywords || [
@@ -32,10 +33,15 @@ const Seo = ({ description, author, siteUrl, keywords }) => (
 
       return (
         <Helmet
+          title={title}
           meta={[
             {
               name: 'description',
               content: metaDescription,
+            },
+            {
+              property: `og:title`,
+              content: metaTitle,
             },
             {
               property: 'og:description',
@@ -68,6 +74,7 @@ const Seo = ({ description, author, siteUrl, keywords }) => (
 )
 
 Seo.propTypes = {
+  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   siteUrl: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,

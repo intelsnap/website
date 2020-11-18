@@ -1,13 +1,10 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { Layout } from '../components/core/Layout'
+import Seo from '../components/misc/Seo'
 
 const Markets = () => (
   <Layout>
-    <Helmet>
-      <title>Snaplytic | Markets</title>
-      <meta name="description" content="Snaplytic | Markets" />
-    </Helmet>
+    <Seo title="Snaplytic | Markets" />
     Markets placeholder
   </Layout>
 )

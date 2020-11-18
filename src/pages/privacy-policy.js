@@ -1,13 +1,10 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { Layout } from '../components/core/Layout'
+import Seo from '../components/misc/Seo'
 
 const PrivacyPolicy = () => (
   <Layout>
-    <Helmet>
-      <title>Snaplytic | Privacy-Policy</title>
-      <meta name="description" content="Snaplytic | Privacy-Policy" />
-    </Helmet>
+    <Seo title="Snaplytic | Privacy-Policy" />
     <h1>Privacy Policy</h1>
     <h2>Privacy Notice</h2>
     <p>

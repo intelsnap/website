@@ -1,15 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Helmet } from 'react-helmet'
 import { Layout } from '../components/core/Layout'
 import aboutBanner from '../assets/about.png'
+import Seo from '../components/misc/Seo'
 
 const About = () => (
   <Layout>
-    <Helmet>
-      <title>Snaplytic | About</title>
-      <meta name="description" content="Snaplytic | About" />
-    </Helmet>
+    <Seo title="Snaplytic | Privacy-Policy" />
     <img src={aboutBanner} alt="about" width="100%" height="100%" />
     <Bio>
       <BioHeader>Dr. Sahar Zafar - Founder & CEO</BioHeader>

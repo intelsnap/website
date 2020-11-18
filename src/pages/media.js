@@ -1,13 +1,10 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { Layout } from '../components/core/Layout'
+import Seo from '../components/misc/Seo'
 
 const Media = () => (
   <Layout>
-    <Helmet>
-      <title>Snaplytic | Media</title>
-      <meta name="description" content="Snaplytic | Media" />
-    </Helmet>
+    <Seo title="Snaplytic | Media" description="Snaplytic Media " />
     Media placeholder
   </Layout>
 )
