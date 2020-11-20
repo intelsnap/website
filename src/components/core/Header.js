@@ -105,7 +105,7 @@ const Container = styled.header`
   z-index: 20;
   width: 100vw;
   height: 60px;
-  background-color: #f40010;
+  background-color: white;
   ${({ enableShadow }) =>
     enableShadow && 'box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);'}
   transition: box-shadow 0.2s ease-in-out;
@@ -145,7 +145,7 @@ const Navigation = styled.nav`
   flex: 1 1 auto;
   flex-direction: column;
   max-height: 100vh;
-  background-color: #f40010;
+  background-color: #fdfdfdfc;
   opacity: ${({ open }) => (open ? '1' : '0')};
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.25);
   transition: opacity 0.2s ease-in-out;
@@ -199,14 +199,16 @@ const NavLink = styled(Link)`
   border-radius: 4px;
   padding: 10px 15px;
   font-family: 'Roboto', sans-serif;
-  font-size: 0.833em;
-  color: #fff;
+  font-size: 0.849em;
+  font-weight: bold;
+  color: grey;
   text-decoration: none;
   text-transform: uppercase;
   transition: background-color 0.2s ease-in-out;
   &.active,
   &:hover {
-    background-color: #b7020a;
+    background-color: #93ce8fa8;
+    color: black;
   }
 `
 const StyledIcon = styled.img`

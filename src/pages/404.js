@@ -6,7 +6,7 @@ import { Layout } from '../components/core/Layout'
 const NotFoundPage = () => (
   <Layout>
     <Helmet>
-      <title>"Snaplytic | 404"</title>
+      <title>Snaplytic | Error</title>
       <meta name="description" content="Snaplytic | 404" />
     </Helmet>
     <Container>
