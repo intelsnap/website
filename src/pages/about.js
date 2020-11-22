@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-
 import { Layout } from '../components/core/Layout'
 import aboutBanner from '../assets/about.png'
+import Seo from '../components/misc/Seo'
 
 const About = () => (
   <Layout>
+    <Seo title="Snaplytic | Privacy-Policy" />
     <img src={aboutBanner} alt="about" width="100%" height="100%" />
     <Bio>
       <BioHeader>Dr. Sahar Zafar - Founder & CEO</BioHeader>

@@ -3,9 +3,11 @@ import styled from 'styled-components'
 import { Layout } from '../components/core/Layout'
 import homeBanner from '../assets/home.png'
 import img from '../assets/image-icon.jpg'
+import Seo from '../components/misc/Seo'
 
 const Home = () => (
   <Layout>
+    <Seo title="Snaplytic | Home" />
     <img
       src={homeBanner}
       alt="about"

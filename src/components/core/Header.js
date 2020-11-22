@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
-import { CloseOutlined, MenuOutlined } from '@ant-design/icons'
+import CloseIcon from '../../assets/close-outline.svg'
+import MenuIcon from '../../assets/menu.svg'
 
 import { useScroll } from '../misc/useScroll'
 
@@ -43,7 +44,7 @@ export const Header = () => {
           <NavigationHeader>
             <LogoLink to="/">Logo</LogoLink>
             <HamburgerCloseButton onClick={handleHamburgerCloseClick}>
-              <CloseOutlined />
+              <StyledIcon src={CloseIcon} alt="Close" />
             </HamburgerCloseButton>
           </NavigationHeader>
           <Nav>
@@ -57,7 +58,7 @@ export const Header = () => {
           </Nav>
         </Navigation>
         <HamburgerOpenButton onClick={handleHamburgerOpenClick}>
-          <MenuOutlined />
+          <StyledIcon src={MenuIcon} alt="Menu" />
         </HamburgerOpenButton>
       </ContainerWrapper>
     </Container>
@@ -206,5 +207,16 @@ const NavLink = styled(Link)`
   &.active,
   &:hover {
     background-color: #b7020a;
+  }
+`
+const StyledIcon = styled.img`
+  font-size: 0.8rem;
+  margin: 10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  :hover {
+    background-color: #f46c00eb;
   }
 `

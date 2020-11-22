@@ -1,8 +1,10 @@
 import React from 'react'
 import { Layout } from '../components/core/Layout'
+import Seo from '../components/misc/Seo'
 
 const PrivacyPolicy = () => (
   <Layout>
+    <Seo title="Snaplytic | Privacy-Policy" />
     <h1>Privacy Policy</h1>
     <h2>Privacy Notice</h2>
     <p>
