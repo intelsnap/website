@@ -36,6 +36,7 @@ Layout.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.element,
+    PropTypes.object,
     PropTypes.arrayOf(PropTypes.element),
   ]).isRequired,
 }

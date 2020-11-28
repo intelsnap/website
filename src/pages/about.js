@@ -6,7 +6,7 @@ import Seo from '../components/misc/Seo'
 
 const About = () => (
   <Layout>
-    <Seo title="Snaplytic | Privacy-Policy" />
+    <Seo title="Snaplytic | About" />
     <img src={aboutBanner} alt="about" width="100%" height="100%" />
     <Bio>
       <BioHeader>Dr. Sahar Zafar - Founder & CEO</BioHeader>
