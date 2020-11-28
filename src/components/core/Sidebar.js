@@ -34,7 +34,7 @@ const sidebarQuery = graphql`
 `
 
 const Sidebar = () => (
-  <div>
+  <SidebarWrapper>
     <Card>
       <CardBody>
         <CardTitle> Categories </CardTitle>
@@ -75,7 +75,7 @@ const Sidebar = () => (
         <StaticQuery
           query={sidebarQuery}
           render={(data) => (
-            <div>
+            <RecentPost>
               {data.allMarkdownRemark.edges.map(({ node }) => (
                 <Card key={node.id}>
                   <Link to={node.fields.slug}>
@@ -93,14 +93,15 @@ const Sidebar = () => (
                   </CardBody>
                 </Card>
               ))}
-            </div>
+            </RecentPost>
           )}
         />
       </CardBody>
     </Card>
-  </div>
+  </SidebarWrapper>
 )
-
+const SidebarWrapper = styled.div``
+const RecentPost = styled.div``
 const Button = styled.button`
   margin-left: auto;
   margin-right: auto;
@@ -196,5 +197,9 @@ const TagHeading = styled.h1`
   color: cyan;
   text-shadow: lightcyan;
   text-align: center;
+  &:hover {
+    background-color: #539da8a1;
+    color: white;
+  }
 `
 export default Sidebar

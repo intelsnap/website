@@ -47,6 +47,10 @@ const TagButton = styled.button`
   line-height: 1.5;
   border-radius: 0.25rem;
   transition: color 0.15s;
+  &:hover {
+    background-color: #288491;
+    color: white;
+  }
 `
 const TagBadge = styled.label`
   margin: 5px;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import { Layout } from '../components/core/Layout'
 import SEO from '../components/misc/Seo'
 import Post from '../components/misc/Post'
@@ -42,23 +43,30 @@ const tagPosts = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Snaplytic | Blog Tags" />
-      <h1>
-        {totalCount} post {totalCount === 1 ? '' : 's'} tagged with "{tag}"`
-      </h1>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Post
-          key={node.id}
-          slug={node.fields.slug}
-          title={node.frontmatter.title}
-          date={node.frontmatter.date}
-          excerpt={node.excerpt}
-          tags={node.frontmatter.tags}
-          fluid={node.frontmatter.image.childImageSharp.fluid}
-        />
-      ))}
+      <TagPostWrapper>
+        <SEO title="Snaplytic | Blog Tags" />
+        <CountPost>
+          {totalCount} post {totalCount === 1 ? '' : 's'} tagged with "{tag}"
+        </CountPost>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <Post
+            key={node.id}
+            slug={node.fields.slug}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            excerpt={node.excerpt}
+            tags={node.frontmatter.tags}
+            fluid={node.frontmatter.image.childImageSharp.fluid}
+          />
+        ))}
+      </TagPostWrapper>
     </Layout>
   )
 }
-
+const CountPost = styled.h2`
+  text-align: center;
+  display: block;
+  padding: 10px;
+`
+const TagPostWrapper = styled.div``
 export default tagPosts
