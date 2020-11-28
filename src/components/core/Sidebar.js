@@ -102,13 +102,14 @@ const Sidebar = () => (
 )
 const SidebarWrapper = styled.div``
 const RecentPost = styled.div``
+
 const Button = styled.button`
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: l=column;
   padding: 3px;
-  width: 41%;
+  width: 73%;
   height: 15%;
   color: #288491f0;
   background-color: white;
@@ -130,7 +131,7 @@ const Button = styled.button`
     display: flex;
     flex-direction: l=column;
     padding: 3px;
-    width: 26%;
+    width: 65%;
     height: 20%;
     color: #288491f0;
     background-color: white;
@@ -138,6 +139,10 @@ const Button = styled.button`
     font-family: sans-serif;
     font-size: 0.7em;
     line-height: 1em;
+    &:hover {
+      background-color: #539da8a1;
+      color: white;
+    }
   }
 `
 export const CardBody = styled.div`
@@ -152,6 +157,9 @@ export const CardTitle = styled.div`
   margin-bottom: 0.85rem;
   text-align: center;
   text-transform: uppercase;
+  @media only screen and (max-width: 992px) {
+    font-size: 16px;
+  }
 `
 export const Card = styled.div`
   margin-top: 5px;
@@ -179,7 +187,7 @@ const FormGroup = styled.div`
 `
 const Input = styled.input`
   display: block;
-  width: 100%;
+  width: 88%;
   height: calc(1.5em + 0.75rem + 2px);
   padding: 0.375rem 0.75rem;
   font-size: 1rem;

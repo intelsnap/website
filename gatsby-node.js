@@ -68,6 +68,15 @@ exports.createPages = ({ graphql, actions }) => {
         tagPostCounts,
       },
     })
+    // for side bar
+    createPage({
+      path: '/sidebar',
+      component: path.resolve(`./src/components/core/Sidebar.js`),
+      context: {
+        tags,
+        tagPostCounts,
+      },
+    })
     // Tag posts pages
     tags.forEach((tag) => {
       createPage({

@@ -34,7 +34,7 @@ const tagsPage = ({ pageContext }) => {
 
 export default tagsPage
 
-const TagButton = styled.button`
+export const TagButton = styled.button`
   background-color: #007bff;
   border-color: #007bff;
   display: inline-block;
@@ -52,7 +52,7 @@ const TagButton = styled.button`
     color: white;
   }
 `
-const TagBadge = styled.label`
+export const TagBadge = styled.label`
   margin: 5px;
   color: #212529;
   background-color: #f8f9fa;
@@ -67,7 +67,7 @@ const TagBadge = styled.label`
   border-radius: 0.25rem;
   transition: color 0.15s;
 `
-const BlogsTagWrapper = styled.ul`
+export const BlogsTagWrapper = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -77,7 +77,7 @@ const BlogsTagWrapper = styled.ul`
     margin-bottom: 10px;
   }
 `
-const TagHeading = styled.h1`
+export const TagHeading = styled.h1`
   color: blanchedalmond;
   text-shadow: lightcyan;
   text-align: center;
