@@ -1,17 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import _ from 'lodash'
+import PropTypes from 'prop-types'
 import { Layout } from '../components/core/Layout'
 import SEO from '../components/misc/Seo'
 import { TagLink } from '../components/misc/Post'
 import { Card, CardBody } from '../components/core/Sidebar'
 
-const tagsPage = ({ pageContext }) => {
+const TagsPage = ({ pageContext }) => {
   const { tags, tagPostCounts } = pageContext
   return (
     <Layout>
       <SEO title="Snaplytic | Blog Tags" />
-      <TagHeading>The Blogs are Categorised as Follows :</TagHeading>
+      <TagsHeading>The Blogs are Categorised as Follows :</TagsHeading>
       <Card>
         <CardBody>
           <BlogsTagWrapper>
@@ -32,7 +33,7 @@ const tagsPage = ({ pageContext }) => {
   )
 }
 
-export default tagsPage
+export default TagsPage
 
 export const TagButton = styled.button`
   background-color: #007bff;
@@ -52,6 +53,29 @@ export const TagButton = styled.button`
     color: white;
   }
 `
+TagsPage.propTypes = {
+  pageContext: PropTypes.shape({
+    tags: PropTypes.string.isRequired,
+    tagPostCounts: PropTypes.number.isRequired,
+  }),
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+            }),
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }),
+          }),
+        }).isRequired
+      ),
+    }),
+  }),
+}
 export const TagBadge = styled.label`
   margin: 5px;
   color: #212529;
@@ -77,7 +101,7 @@ export const BlogsTagWrapper = styled.ul`
     margin-bottom: 10px;
   }
 `
-export const TagHeading = styled.h1`
+export const TagsHeading = styled.h1`
   color: blanchedalmond;
   text-shadow: lightcyan;
   text-align: center;

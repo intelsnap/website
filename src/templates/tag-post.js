@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Layout } from '../components/core/Layout'
 import SEO from '../components/misc/Seo'
@@ -37,17 +38,18 @@ export const tagQuery = graphql`
   }
 `
 
-const tagPosts = ({ data, pageContext }) => {
+const TagPosts = ({ data, pageContext }) => {
   const { tag } = pageContext
   const { totalCount } = data.allMarkdownRemark
+  const tagHeader = `${totalCount} post${
+    totalCount === 1 ? '' : 's'
+  } tagged with "${tag}"`
 
   return (
     <Layout>
       <TagPostWrapper>
         <SEO title="Snaplytic | Blog Tags" />
-        <CountPost>
-          {totalCount} post {totalCount === 1 ? '' : 's'} tagged with "{tag}"
-        </CountPost>
+        <CountPost>{tagHeader}</CountPost>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Post
             key={node.id}
@@ -63,10 +65,32 @@ const tagPosts = ({ data, pageContext }) => {
     </Layout>
   )
 }
+TagPosts.propTypes = {
+  pageContext: PropTypes.shape({
+    tag: PropTypes.string.isRequired,
+  }),
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      totalCount: PropTypes.number.isRequired,
+      edges: PropTypes.arrayOf(
+        PropTypes.shape({
+          node: PropTypes.shape({
+            frontmatter: PropTypes.shape({
+              title: PropTypes.string.isRequired,
+            }),
+            fields: PropTypes.shape({
+              slug: PropTypes.string.isRequired,
+            }),
+          }),
+        }).isRequired
+      ),
+    }),
+  }),
+}
 const CountPost = styled.h2`
   text-align: center;
   display: block;
   padding: 10px;
 `
 const TagPostWrapper = styled.div``
-export default tagPosts
+export default TagPosts

@@ -46,12 +46,39 @@ Post.propTypes = {
   tags: PropTypes.array,
 }
 const Card = styled.div`
-  margin-bottom: 30px;
+  background-color: #fff;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 5px 20px 40px;
+  min-height: 300px;
+  background: #fff 50%;
+  background-size: cover;
   border-style: ridge;
   border-width: 5px;
-  border-radius: 25px;
-  @media only screen and (max-width: 992px) {
-    margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+    1px 3px 8px rgba(39, 44, 49, 0.03);
+  transition: all 0.6s ease;
+
+  &:hover {
+    transform: scale3d(1, 1.1, 1.1);
+    animation: steps(8);
+    text-shadow: black;
+    background: #fff 50%;
+    border-radius: 5px;
+    box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
+      1px 3px 8px rgba(39, 44, 49, 0.03);
+  }
+  &:image {
+    transform: scale(0.8);
+    animation: steps(8);
+  }
+
+  @media only screen and (min-width: 992px) {
+    flex: 1 1 46%;
+    flex-direction: column;
     border-style: ridge;
     border-width: 3px;
     border-radius: 20px;

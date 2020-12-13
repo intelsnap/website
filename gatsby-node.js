@@ -87,5 +87,27 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+    // Create posts pagination pages
+    const postsPerPage = 2
+    const numberOfPages = Math.ceil(posts.length / postsPerPage)
+
+    Array.from({ length: numberOfPages }).forEach((__, blog) => {
+      const isFirstPage = blog === 0
+      const currentPage = blog + 1
+
+      // Skip first page because of index.js
+      if (isFirstPage) return
+
+      createPage({
+        path: `/blog/${currentPage}`,
+        component: path.resolve(`./src/templates/blog-list.js`),
+        context: {
+          limit: postsPerPage,
+          skip: blog * postsPerPage,
+          numberOfPages,
+          currentPage,
+        },
+      })
+    })
   })
 }

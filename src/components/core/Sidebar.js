@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { TagLink } from '../misc/Post'
 
-const sidebarQuery = graphql`
+export const sidebarQuery = graphql`
   query sidebarQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
@@ -77,7 +77,7 @@ const Sidebar = () => (
           render={(data) => (
             <RecentPost>
               {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Card key={node.id}>
+                <Cards key={node.id}>
                   <Link to={node.fields.slug}>
                     <Img
                       className="card-image-top"
@@ -85,13 +85,13 @@ const Sidebar = () => (
                     />
                   </Link>
                   <CardBody>
-                    <CardTitle>
+                    <CardTitles>
                       <Link to={node.fields.slug}>
                         {node.frontmatter.title}
                       </Link>
-                    </CardTitle>
+                    </CardTitles>
                   </CardBody>
-                </Card>
+                </Cards>
               ))}
             </RecentPost>
           )}
@@ -100,6 +100,9 @@ const Sidebar = () => (
     </Card>
   </SidebarWrapper>
 )
+// Sidebar.propTypes = {
+//   data: PropTypes.object,
+// }
 const SidebarWrapper = styled.div``
 const RecentPost = styled.div``
 
@@ -157,23 +160,50 @@ export const CardTitle = styled.div`
   margin-bottom: 0.85rem;
   text-align: center;
   text-transform: uppercase;
-  @media only screen and (max-width: 992px) {
-    font-size: 16px;
+  font-size: 15px;
+  @media only screen and (min-width: 1024px) {
+    font-size: 12px;
   }
 `
+export const CardTitles = styled.div`
+  margin-bottom: 0.85rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 9px;
+`
 export const Card = styled.div`
-  margin-top: 5px;
-  margin-bottom: 15px;
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  margin: 5px 20px 40px;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
+  background: #fff 50%;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-
+  box-shadow: 0 2.75335px 44.0535px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  @media only screen and (max-width: 992px) {
+    margin-bottom: 20px;
+  }
+`
+export const Cards = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 5px 20px 40px;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  background: #fff 50%;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  box-shadow: 0 2.75335px 44.0535px rgba(0, 0, 0, 0.12);
   @media only screen and (max-width: 992px) {
     margin-bottom: 20px;
   }
