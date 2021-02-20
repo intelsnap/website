@@ -6,21 +6,19 @@ import Footer from '../components/App/Footer'
 import ServiceDetailsContent from '../components/ServiceDetails/ServiceDetailsContent'
 import RelatedServices from '../components/ServiceDetails/RelatedServices'
 
-const Details = () => {
-  return (
-    <Layout>
-      <Navbar />
-      <PageBanner
-        pageTitle="Service Details"
-        homePageText="Home"
-        homePageUrl="/"
-        activePageText="Service Details"
-      />
-      <ServiceDetailsContent />
-      <RelatedServices />
-      <Footer />
-    </Layout>
-  )
-}
+const Details = () => (
+  <Layout>
+    <Navbar />
+    <PageBanner
+      pageTitle="Service Details"
+      homePageText="Home"
+      homePageUrl="/"
+      activePageText="Service Details"
+    />
+    <ServiceDetailsContent />
+    <RelatedServices />
+    <Footer />
+  </Layout>
+)
 
 export default Details

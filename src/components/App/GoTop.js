@@ -25,21 +25,19 @@ const GoTop = ({ scrollStepInPx, delayInMs }) => {
     timeoutRef.current = setInterval(onScrollStep, delayInMs)
   }
 
-  const renderGoTopIcon = () => {
-    return (
-      <div
-        className={`go-top ${thePosition ? 'active' : ''}`}
-        onClick={scrollToTop}
-        role="button"
-        tabIndex="0"
-        aria-hidden="true"
-      >
-        <i className="flaticon-up"></i>
-      </div>
-    )
-  }
+  const renderGoTopIcon = () => (
+    <div
+      className={`go-top ${thePosition ? 'active' : ''}`}
+      onClick={scrollToTop}
+      role="button"
+      tabIndex="0"
+      aria-hidden="true"
+    >
+      <i className="flaticon-up" />
+    </div>
+  )
 
-  return <React.Fragment>{renderGoTopIcon()}</React.Fragment>
+  return <>{renderGoTopIcon()}</>
 }
 
 export default GoTop
