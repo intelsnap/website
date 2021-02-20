@@ -1,14 +1,24 @@
 import React from 'react'
-import { Layout } from '../components/core/Layout'
-import contactBanner from '../assets/contact.png'
-import Seo from '../components/misc/Seo'
+import Layout from '../components/App/Layout'
+import Navbar from '../components/App/Navbar'
+import PageBanner from '../components/Common/PageBanner'
+import Footer from '../components/App/Footer'
+import ContactForm from '../components/Contact/ContactForm'
 
-const Contact = () => (
-  <Layout>
-    <Seo title="Snaplytic | Contact" />
-    <img src={contactBanner} alt="about" width="100%" height="100%" />
-    <div>Contact Place holder</div>
-  </Layout>
-)
+const Contact = () => {
+  return (
+    <Layout>
+      <Navbar />
+      <PageBanner
+        pageTitle="Contact"
+        homePageText="Home"
+        homePageUrl="/"
+        activePageText="Contact"
+      />
+      <ContactForm />
+      <Footer />
+    </Layout>
+  )
+}
 
 export default Contact

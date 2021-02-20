@@ -1,36 +1,22 @@
+/**
+ * Configure your Gatsby site with this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/gatsby-config/
+ * 
+ * All configuration related things are here
+ * 
+ * This is configuration file
+ */
+
 module.exports = {
-  siteMetadata: {
-    title: 'Snaplytic',
-    description: 'We help companies with intelligent solutions.',
-    author: 'snaplytic-io',
-    siteUrl: 'https://snaplytic.io',
-    navigation: [
-      { title: 'Home', route: '/' },
-      { title: 'Expertise', route: '/expertise' },
-      { title: 'Markets', route: '/markets' },
-      { title: 'Media', route: '/media' },
-      { title: 'About', route: '/about' },
-      { title: 'Contact', route: '/contact' },
-    ],
-  },
+  /* Your site config here */
   plugins: [
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-html-attributes',
       options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdowns`,
-        path: `${__dirname}/src/markdown-pages/`,
-      },
-    },
+        lang: 'zxx'
+      }
+    }
   ],
 }
