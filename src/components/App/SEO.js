@@ -8,7 +8,7 @@ const SEO = () => {
         <title>Snaplytic, Inc.</title>
         <meta
           name="description"
-          content="Rewy - React Gatsby IT Startup Templates Collection"
+          content="Snaplytic, Inc."
         />
         <meta
           name="og:title"
